@@ -56,10 +56,16 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String name_val = userinput.getText().toString();
-                db.Delete(name_val);
-                Log.d("Asma","after deleting value");
-                Toast.makeText(MainActivity3.this, "Deletion Successful. You deleted: " + name_val, Toast.LENGTH_SHORT).show();
+                try {
+                    String name_val = userinput.getText().toString();
+                    db.Delete(name_val);
+                    Log.d("Asma", "after deleting value");
+                    Toast.makeText(MainActivity3.this, "Deletion Successful. You deleted: " + name_val, Toast.LENGTH_SHORT).show();
+                }
+                catch(Exception e) {
+                    String input_val = userinput.getText().toString();
+                    Toast.makeText(MainActivity3.this, "you did not delete: " + input_val, Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

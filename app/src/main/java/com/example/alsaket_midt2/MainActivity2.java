@@ -45,16 +45,17 @@ public class MainActivity2 extends AppCompatActivity {
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int id_val = Integer.parseInt(id.getText().toString());
-                int nid_val = Integer.parseInt(nid.getText().toString());
-                String name_val = name.getText().toString();
+                try {
+                    int id_val = Integer.parseInt(id.getText().toString());
+                    int nid_val = Integer.parseInt(nid.getText().toString());
+                    String name_val = name.getText().toString();
 
-                db.Add(id_val, name_val, nid_val);
-                Log.d("Asma","after adding value");
-
-
-                Toast.makeText(MainActivity2.this, "Successful Add", Toast.LENGTH_LONG).show();
-
+                    db.Add(id_val, name_val, nid_val);
+                    Log.d("Asma", "after adding value");
+                }
+                catch(Exception e) {
+                    Toast.makeText(MainActivity2.this, "Insertion was UNSUCCESSFUL, try again.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
