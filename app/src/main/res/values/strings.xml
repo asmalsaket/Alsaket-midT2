@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Alsaket-midT2</string>
+    <string-array name="cities">
+        <item>London</item>
+        <item>Riyadh</item>
+        <item>Istanbul</item>
+    </string-array>
 </resources>
