@@ -8,7 +8,7 @@
     tools:context=".MainActivity3">
 
     <EditText
-        android:id="@+id/userinp"
+        android:id="@+id/userinput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
